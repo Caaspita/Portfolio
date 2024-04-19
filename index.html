@@ -14,17 +14,17 @@
         <img src="./img/perfil.jpeg" alt="Imagen perfil">
         <nav class="menu__lista">
             <ul>
-                <li class="menu__items"><a href="#">Sobre Mi</a></li>
-                <li class="menu__items"><a href="#">Skills</a></li>
-                <li class="menu__items"><a href="#">Hobbies</a></li>
-                <li class="menu__items"><a href="#">Formacion</a></li>
-                <li class="menu__items"><a href="#">Proyectos</a></li>
+                <li class="menu__items"><a href="#titulo">Sobre Mi</a></li>
+                <li class="menu__items"><a href="#skills">Skills</a></li>
+                <li class="menu__items"><a href="#hobbies">Hobbies</a></li>
+                <li class="menu__items"><a href="#formacion">Formacion</a></li>
+                <li class="menu__items"><a href="#experiencia">Proyectos</a></li>
                 <li class="menu__items"><b>Lucascaspani@gmail.com</b></li>
             </ul>
         </nav>
     </header>
     <main class="main__contenedor">
-        <section class="titulo__contenedor">
+        <section class="titulo__contenedor" id="titulo">
             <h1>Hola, Soy Lucas Caspani</h1>
             <h2>Desarrollador FrontEnd</h2>
         </section>
@@ -32,7 +32,7 @@
             <h3>Sobre mi</h3>
             <p>Hola, soy Lucas Caspani, un estudiante de Ingeniería Industrial y desarrollador web independiente. Como desarrollador, disfruto creando soluciones innovadoras y enfrentando desafíos creativos. Mi curiosidad me lleva a aprender y crecer continuamente, convirtiendo cada proyecto en una oportunidad para expandir mis habilidades y conocimientos.</p>
         </section>
-        <section class="skills__contenedor">
+        <section class="skills__contenedor" id="skills">
             <h3>Skills</h3>
             <div class="skills__imgs">
                 <img src="./img/css-icon.svg" alt="">
@@ -40,7 +40,7 @@
                 <img src="./img/javascript-programming-language-icon.svg" alt="">
             </div>
         </section>
-        <section class="hobbies__contenedor">
+        <section class="hobbies__contenedor" id="hobbies">
             <h3>Hobbies</h3>
             <div class="hobbies__items-contenedor">
                 <div class="hobbies__items">
@@ -61,7 +61,7 @@
                 </div>              
             </div>
         </section>
-        <section class="formacion__contenedor">
+        <section class="formacion__contenedor" id="formacion">
             <h3>Formacion Academica</h3>
             <div class="formacion__items-contendor">
                 <div class="formacion__items">
@@ -77,14 +77,14 @@
 
             </div>
         </section>
-        <section class="experiencia__contenedor">
+        <section class="experiencia__contenedor" id="experiencia">
             <h3>Experiencia Profesional</h3>
             <div class="exp__item-contenedor">
                 <div class="experiencia__item">
                     <img src="./img/Encriptador.jpg" alt="Encriptador img">
                     <div class="exp__botones">
                         <P>Encriptador de texto</P>
-                        <div>
+                        <div class="exp_botones-contenedor">
                             <a class="exp__button-repo" href="https://github.com/Caaspita/CodificadorAlura">Repositorio</a>
                             <a class="exp__button-demo" href="https://caaspita.github.io/CodificadorAlura/">Ver Demo</a>
                         </div>
@@ -92,27 +92,27 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="contacto__contenedor" id="contacto">
             <h3>Contactame</h3>
-            <form action="enviar">
-                <div>
+            <form action="enviar" class="contacto__intems" id="form">
+                <div class="c_item">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input class="contacto__input" type="text" id="nombre" name="nombre">
                 </div>
-                <div>
+                <div class="c_item">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input class="contacto__input" type="text" id="email" name="email">
                 </div>
-                <div>
+                <div class="c_item">
                     <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" required>
+                    <input class="contacto__input" type="text" id="asunto" name="asunto">
                 </div>
-                <div>
+                <div class="c_item">
                     <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    <textarea class="contacto__textarea" id="mensaje" name="mensaje" rows="4"></textarea>
                 </div>
-                <div>
-                    <button type="submit">Enviar</button>
+                <div class="c_item">
+                    <button class="contacto__boton" type="submit" onclick="validacion()">Enviar</button>
                 </div>
             </form>
         </section>
@@ -120,6 +120,6 @@
             <p>Desarrollado por <a href="https://www.linkedin.com/in/lucascaspani/">Caspita</a></p>
         </footer>
     </main>
-    
+    <script src="app.js"></script>
 </body>
 </html>

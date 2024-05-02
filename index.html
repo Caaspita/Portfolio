@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contenedor">
+    <header class="menu__contenedor">
+        <img src="./img/perfil.jpeg" alt="Imagen perfil">
+        <nav class="menu__lista">
+            <ul>
+                <li class="menu__items"><a href="#titulo">Sobre Mi</a></li>
+                <li class="menu__items"><a href="#skills">Skills</a></li>
+                <li class="menu__items"><a href="#hobbies">Hobbies</a></li>
+                <li class="menu__items"><a href="#formacion">Formacion</a></li>
+                <li class="menu__items"><a href="#experiencia">Proyectos</a></li>
+                <li class="menu__items"><b>Lucascaspani@gmail.com</b></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main__contenedor">
+        <section class="titulo__contenedor" id="titulo">
+            <h1>Hola, Soy Lucas Caspani</h1>
+            <h2>Desarrollador FrontEnd</h2>
+        </section>
+        <section class="descripcion__contenedor">
+            <h3>Sobre mi</h3>
+            <p>Hola, soy Lucas Caspani, un estudiante de Ingeniería Industrial y desarrollador web independiente. Como desarrollador, disfruto creando soluciones innovadoras y enfrentando desafíos creativos. Mi curiosidad me lleva a aprender y crecer continuamente, convirtiendo cada proyecto en una oportunidad para expandir mis habilidades y conocimientos.</p>
+        </section>
+        <section class="skills__contenedor" id="skills">
+            <h3>Skills</h3>
+            <div class="skills__imgs">
+                <img src="./img/css-icon.svg" alt="">
+                <img src="./img/html-icon.svg" alt="">
+                <img src="./img/javascript-programming-language-icon.svg" alt="">
+            </div>
+        </section>
+        <section class="hobbies__contenedor" id="hobbies">
+            <h3>Hobbies</h3>
+            <div class="hobbies__items-contenedor">
+                <div class="hobbies__items">
+                    <img src="./img/aerial-lift.svg" alt="">
+                    <P>Esquiar</P>
+                </div>
+                <div class="hobbies__items">
+                    <img src="./img/fish-hook.svg" alt="">
+                    <p>Pescar</p>
+                </div>
+                <div class="hobbies__items">
+                    <img src="./img/tent.svg" alt="">
+                    <p>Acampar</p>
+                </div>
+                <div class="hobbies__items">
+                    <img src="./img/netflix.svg" alt="">
+                    <p>Ver Peliculas</p>
+                </div>              
+            </div>
+        </section>
+        <section class="formacion__contenedor" id="formacion">
+            <h3>Formacion Academica</h3>
+            <div class="formacion__items-contendor">
+                <div class="formacion__items">
+                    <img src="./img/alura.png" alt="alura img">
+                    <p><b>Especializacion FrontEnd</b></p>
+                    <p>2024 - En curso</p>
+                </div>
+                <div class="formacion__items">
+                    <img src="./img/udemy.png" alt="udemy img">
+                    <p><b>Desarrollo Fullstack</b></p>
+                    <p>2023 - En curso</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="experiencia__contenedor" id="experiencia">
+            <h3>Experiencia Profesional</h3>
+            <div class="exp__item-contenedor">
+                <div class="experiencia__item">
+                    <img src="./img/Encriptador.jpg" alt="Encriptador img">
+                    <div class="exp__botones">
+                        <P>Encriptador de texto</P>
+                        <div class="exp_botones-contenedor">
+                            <a class="exp__button-repo" href="https://github.com/Caaspita/CodificadorAlura">Repositorio</a>
+                            <a class="exp__button-demo" href="https://caaspita.github.io/CodificadorAlura/">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacto__contenedor" id="contacto">
+            <h3>Contactame</h3>
+            <form action="enviar" class="contacto__intems" id="form">
+                <div class="c_item">
+                    <label for="nombre">Nombre</label>
+                    <input class="contacto__input" type="text" id="nombre" name="nombre">
+                    <p class="contacto__error" id="error_nombre"></p>
+                </div>
+                <div class="c_item">
+                    <label for="email">Email</label>
+                    <input class="contacto__input" type="text" id="email" name="email">
+                    <p class="contacto__error" id="error_email"></p>
+                </div>
+                <div class="c_item">
+                    <label for="asunto">Asunto</label>
+                    <input class="contacto__input" type="text" id="asunto" name="asunto">
+                    <p class="contacto__error" id="error_asunto"></p>
+                </div>
+                <div class="c_item">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="contacto__textarea" id="mensaje" name="mensaje" rows="4"></textarea>
+                    <p class="contacto__error" id="error_mensaje"></p>
+                </div>
+                <div class="c_item">
+                    <button class="contacto__boton" type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+        <footer class="footer">
+            <p>Desarrollado por <a href="https://www.linkedin.com/in/lucascaspani/">Caspita</a></p>
+        </footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

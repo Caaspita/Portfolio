@@ -328,7 +328,6 @@ h3 {
 .c_item{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 .contacto__boton{
     padding: 15px;
@@ -345,6 +344,16 @@ h3 {
     background-color: var(--primario);
     border: solid 1px var(--verde);
     color: var(--verde);
+}
+.contacto__error{
+    display: none;
+    font-size: 12px;
+    color: red;
+    font-weight: 500;
+    margin-left: 15px;
+}
+.contacto_error-input{
+    border: solid 1px red;
 }
 
 /* Footer */

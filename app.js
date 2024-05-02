@@ -1,25 +1,75 @@
-document.getElementById("form").addEventListener("submit", function(event) {
-    // Evitar el reinicio de la página
-    event.preventDefault();
-});
+const nombre = document.getElementById('nombre');
+const email = document.getElementById('email');
+const asunto = document.getElementById('asunto');
+const mensaje = document.getElementById('mensaje');
+const form = document.getElementById('form');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function validacion(){
-    const nombre = document.getElementById('nombre').value;
-    const email = document.getElementById('email').value;
-    const asunto = document.getElementById('asunto').value;
-    const mensaje = document.getElementById('mensaje').value
+const errorNombre = document.getElementById('error_nombre');
+const errorEmail = document.getElementById('error_email');
+const errorAsunto = document.getElementById('error_asunto');
+const errorMensaje = document.getElementById('error_mensaje');
 
-    const emailvalido = /\S+@\S+\.\S+/;
+form.addEventListener("submit", e =>{
+    e.preventDefault();
 
+    validar();
+})
 
-    if(nombre === "" || nombre.length > 50){
-        console.log('Error nombre')
-        
-        return
+function validar(){
+
+    if(nombre.value.length < 3 ){
+        errorNombre.style.display = "flex";
+        errorNombre.innerHTML = "Por favor ingrese un nombre mas largo";
+        nombre.classList.add('contacto_error-input');
+    }else{
+        errorNombre.style.display = "none";
+        errorNombre.innerHTML = "";
+        nombre.classList.remove('contacto_error-input');
     }
 
-    if(emailvalido.test(email)){
-        console.log(email)
+    if (!emailRegex.test(email.value)) {
+        errorEmail.style.display = "flex";
+        errorEmail.innerHTML = "Por favor, ingrese un email valido";
+        email.classList.add('contacto_error-input');
+    }else{
+        errorEmail.style.display = "none";
+        errorEmail.innerHTML = "";
+        email.classList.remove('contacto_error-input');
+    }
+
+    if(asunto.value === ""){
+        errorAsunto.style.display = "flex";
+        errorAsunto.innerHTML = "Por favor, ingrese el asunto";
+        asunto.classList.add('contacto_error-input');
+    }else{
+        errorAsunto.style.display = "none";
+        errorAsunto.innerHTML = "";
+        asunto.classList.remove('contacto_error-input');
+    }
+
+    if(asunto.value.length < 6 && asunto.value.length > 1){
+        errorAsunto.style.display = "flex";
+        errorAsunto.innerHTML = "Por favor, ingrese un asunto mas largo";
+        asunto.classList.add('contacto_error-input');
+    }
+
+    if(mensaje.value === ""){
+        errorMensaje.style.display = "flex";
+        errorMensaje.innerHTML = "Por favor, ingrese un mensaje";
+        mensaje.classList.add('contacto_error-input');
+    }else{
+        errorMensaje.style.display = "none";
+        errorMensaje.innerHTML = "";
+        mensaje.classList.remove('contacto_error-input');
+    }
+    
+    if(mensaje.value.length > 300 ){
+        errorMensaje.style.display = "flex";
+        errorMensaje.innerHTML = "Por favor, el mensaje debe contener maximo 300 caracteres";
+        mensaje.classList.add('contacto_error-input');
+    }else{
+        mensaje.classList.remove('contacto_error-input');
     }
 
 }

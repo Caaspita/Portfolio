@@ -98,21 +98,25 @@
                 <div class="c_item">
                     <label for="nombre">Nombre</label>
                     <input class="contacto__input" type="text" id="nombre" name="nombre">
+                    <p class="contacto__error" id="error_nombre"></p>
                 </div>
                 <div class="c_item">
                     <label for="email">Email</label>
                     <input class="contacto__input" type="text" id="email" name="email">
+                    <p class="contacto__error" id="error_email"></p>
                 </div>
                 <div class="c_item">
                     <label for="asunto">Asunto</label>
                     <input class="contacto__input" type="text" id="asunto" name="asunto">
+                    <p class="contacto__error" id="error_asunto"></p>
                 </div>
                 <div class="c_item">
                     <label for="mensaje">Mensaje</label>
                     <textarea class="contacto__textarea" id="mensaje" name="mensaje" rows="4"></textarea>
+                    <p class="contacto__error" id="error_mensaje"></p>
                 </div>
                 <div class="c_item">
-                    <button class="contacto__boton" type="submit" onclick="validacion()">Enviar</button>
+                    <button class="contacto__boton" type="submit">Enviar</button>
                 </div>
             </form>
         </section>
